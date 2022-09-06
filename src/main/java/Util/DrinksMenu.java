@@ -1,21 +1,23 @@
 package Util;
 
+import DAO.DrinksOrderRepository;
+import DAO.FoodOrderRepository;
+
 import java.util.Scanner;
 
-public class DrinksMenu {
-    int icetea = 5;
-    int coffee = 7;
-    int ch;
-    int quantity;
+public class DrinksMenu extends FoodMenu {
+    static int  icetea = 5;
+    static int  coffee = 7;
+    static int ch;
+    static int quantity;
     static int total;
     String again;
     Scanner sc = new Scanner(System.in);
-   // DrinksOrder drinks=new DrinksOrder();
+
     public void displayMenu() {
-        System.out.println("   Welcome to our king   ");
-        System.out.println();
-        System.out.println("     1.icetea   $5   ");
-        System.out.println("     2.coffee   $20  ");
+
+        DrinksOrderRepository d = new DrinksOrderRepository();
+        System.out.println(d.getAllDrinksOrder());
     }
 
     public void bill() {
@@ -54,5 +56,6 @@ public class DrinksMenu {
             }
         }
     }
+
 
 }

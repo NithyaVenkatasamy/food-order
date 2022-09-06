@@ -20,6 +20,7 @@ public class DrinksOrderRepository {
             ResultSet rs = statement.executeQuery("Select * From DrinksOrder");
             while (rs.next()) {
                 DrinksOrder loadedDrinksOrder = new DrinksOrder(rs.getString("menuitems"), rs.getInt("prize"));
+                System.out.println(loadedDrinksOrder);
                 allDrinksOrder.add(loadedDrinksOrder);
             }
         } catch (SQLException e) {

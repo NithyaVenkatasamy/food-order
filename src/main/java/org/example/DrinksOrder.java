@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class DrinksOrder {
 
-    public static String menuItems;
-    public static int prize;
+    public String menuItems;
+    public int prize;
     public DrinksOrder(String menuItems, int prize){
         this.menuItems = menuItems;
         this.prize = prize;
@@ -13,7 +13,7 @@ public class DrinksOrder {
 
 
 
-    public String tostring () {
+    public String toString () {
         return menuItems + ": prize " + prize;
     }
     public String getMenuItems () {

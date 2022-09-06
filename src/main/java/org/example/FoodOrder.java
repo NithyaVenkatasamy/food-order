@@ -3,12 +3,19 @@ package org.example;
 import java.util.Scanner;
 
 public class FoodOrder {
-    public static String menuItems;
-    public static int prize;
+    public String menuItems;
+    public int prize;
+    public String menu;
+
+
     public FoodOrder(String menuItems, int prize){
             this.menuItems = menuItems;
             this.prize = prize;
+
         }
+     public FoodOrder(String menuitems){
+        this.menu=menuitems;
+     }
 
         public String toString () {
 
@@ -21,6 +28,7 @@ public class FoodOrder {
 
         this.menuItems = menuItems;
         }
+
         public int getPrize () {
 
         return prize;
@@ -28,6 +36,13 @@ public class FoodOrder {
         public void setPrize ( int prize){
 
         this.prize = prize;
+        }
+
+        public String getMenu(){
+        return menu;
+        }
+        public void setMenu(String menu){
+        this.menu=menu;
         }
 
 
